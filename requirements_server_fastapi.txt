@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+Pillow
+pydantic
+python-multipart
+fastapi-cors

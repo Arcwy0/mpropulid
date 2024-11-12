@@ -1,0 +1,27 @@
+### Server
+docker build -f Dockerfile_server -t pulid-server .
+
+docker run -it --name pulid_server --gpus '"device=0"' -p 8011:8080 -v /media/imit-learn/ISR_2T/MPro/PuLID:/app pulid-server \
+    python3 server_main_fastapi.py --offload --fp8
+
+docker stop pulid_server
+docker rm pulid_server
+
+### ngrok
+ngrok http http://localhost:8011
+
+### Regular
+docker build -f Dockerfile -t pulid-container .
+
+docker run -it --name pulid --gpus '"device=0"' -p 8011:8080 -v /media/imit-learn/ISR_2T/MPro/PuLID:/app pulid-container
+
+docker stop pulid
+docker rm pulid
+
+### conda
+conda activate pulid
+conda deactivate pulid
+
+#Regular scripts
+python3 app_generation.py --offload --fp8
+

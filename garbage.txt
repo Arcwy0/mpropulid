@@ -1,0 +1,25 @@
+    #     input={
+    #     "width": 896,
+    #     "height": 1152,
+    #     "prompt": "portrait of man, neon color, cinematic",
+    #     "true_cfg": 1,
+    #     "id_weight": 1.05,
+    #     "num_steps": 20,
+    #     "start_step": 0,
+    #     "num_outputs": 4,
+    #     "output_format": "webp",
+    #     "guidance_scale": 4,
+    #     "output_quality": 80,
+    #     "main_face_image": "",
+    #     "negative_prompt": "bad quality, worst quality, text, signature, watermark, extra limbs, low resolution, partially rendered objects, deformed or partially rendered eyes, deformed, deformed eyeballs, cross-eyed, blurry",
+    #     "max_sequence_length": 128
+    # }
+    # NEGATIVE PROMPT "bad quality, worst quality, text, signature, watermark, extra limbs, low resolution, partially rendered objects, deformed or partially rendered eyes, deformed, deformed eyeballs, cross-eyed, blurry",
+
+
+        # generate_btn.click(
+        #     fn=generator.generate_image,
+        #     inputs=[width, height, num_steps, start_step, guidance, seed, prompt, id_image, id_weight, neg_prompt,
+        #             true_cfg, timestep_to_start_cfg, max_sequence_length],
+        #     outputs=[output_image, seed_output, intermediate_output],
+        # )

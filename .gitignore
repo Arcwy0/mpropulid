@@ -6,6 +6,10 @@ wandb/*
 tmp/*
 weights/*
 inputs/*
+models/*
+processed_images/*
+output_images/*
+decoded_images/*
 
 *.DS_Store
 

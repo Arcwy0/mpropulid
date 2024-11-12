@@ -8,7 +8,7 @@ from safetensors.torch import load_file as load_sft
 
 from flux.model import Flux, FluxParams
 from flux.modules.autoencoder import AutoEncoder, AutoEncoderParams
-from flux.modules.conditioner import HFEmbedder, T5Tokenizer
+from flux.modules.conditioner import HFEmbedder
 
 
 @dataclass
@@ -37,7 +37,7 @@ configs = {
         repo_id="black-forest-labs/FLUX.1-dev",
         repo_flow="flux1-dev.safetensors",
         repo_ae="ae.safetensors",
-        ckpt_path='models/flux-dev-fp8/flux-dev-fp8.safetensors',
+        ckpt_path='models/flux1-dev.safetensors',
         params=FluxParams(
             in_channels=64,
             vec_in_dim=768,
@@ -135,11 +135,10 @@ def load_flow_model(name: str, device: str = "cuda", hf_download: bool = True):
     return model
 
 # from XLabs-AI https://github.com/XLabs-AI/x-flux/blob/1f8ef54972105ad9062be69fe6b7f841bce02a08/src/flux/util.py#L330
-def load_flow_model_quintized(name: str, device: str = "cuda", hf_download: bool = False):
+def load_flow_model_quintized(name: str, device: str = "cuda", hf_download: bool = True):
     # Loading Flux
     print("Init model")
-    ckpt_path = 'models/flux-dev-fp8/flux-dev-fp8.safetensors'
-    json_path = 'models/flux-dev-fp8/flux_dev_quantization_map.json'
+    ckpt_path = 'models/flux-dev-fp8.safetensors'
     if (
         not os.path.exists(ckpt_path)
         and hf_download
@@ -159,7 +158,6 @@ def load_flow_model_quintized(name: str, device: str = "cuda", hf_download: bool
     requantize(model, sd, quantization_map, device=device)
     print("Model is quantized!")
     return model
-
 
 
 def load_t5(device: str = "cuda", max_length: int = 512) -> HFEmbedder:

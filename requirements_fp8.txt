@@ -16,3 +16,6 @@ onnxruntime-gpu
 accelerate
 SentencePiece
 safetensors
+xformers
+apex
+torchsde

@@ -1,0 +1,19 @@
+{
+    "photostyles": {
+        "Closeup": {
+            "prompt": "Close-up cinematic portrait of a person, highly detailed, professional lighting, sharp focus, beautiful eyes, expressive face",
+            "neg_prompt": "blurred face, unnatural lighting, low detail, background distractions, body cut-off, bad quality, worst quality, text, signature, watermark, extra limbs, low resolution, deformed or partially rendered eyes, deformed, deformed eyeballs, cross-eyed, blurry",
+            "seed": null
+        },
+        "Street": {
+            "prompt": "Authentic street photograph of a person, vibrant city background, candid moment, natural lighting, realistic, beautiful pose, cinematic",
+            "neg_prompt": "over-processed, too staged, artificial lighting, cluttered background, blurred focus, bad quality, worst quality, text, signature, watermark, extra limbs, low resolution, partially rendered objects, deformed eyes, deformed, deformed eyeballs, cross-eyed, blurry",
+            "seed": null
+        },
+        "Christmas": {
+            "prompt": "Warm Christmas person photo, festive decorations, detailed face, cinematic, realistic, snow in the background, holiday atmosphere, soft focus",
+            "neg_prompt": "gloomy lighting, bad quality, worst quality, text, signature, watermark, extra limbs, low resolution, partially rendered objects, partially rendered eyes, deformed, deformed eyeballs, cross-eyed, blurry, messy background, low quality, harsh shadows",
+            "seed": null
+        }
+    }
+}
